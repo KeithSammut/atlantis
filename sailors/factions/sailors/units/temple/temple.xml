@@ -1,0 +1,93 @@
+<?xml version="1.0" standalone="no" ?>
+<unit>
+	<!-- *** parameters *** -->
+	<parameters>
+		<size value="5" />
+		<height value="2" />
+		<max-hp value="3000" regeneration="3000"/>
+		<max-ep value="0" />
+		<armor value="0" />
+		<armor-type value="wood"/>
+		<sight value="5" />
+		<time value="50" />
+		<multi-selection value="true"/>
+		<uniform-selection value="true"/>
+		<max-unit-count value="3"/>
+		<cellmap value="true">
+			<row value="11111" />
+			<row value="00000" />
+			<row value="00000" />
+			<row value="00000" />
+			<row value="11111" />
+		</cellmap>
+		<levels/>
+		<fields>
+			<field value="land" />
+		</fields>
+		<properties>
+			<property value="burnable"/>
+		</properties>
+		<light enabled="true" red="0.8" green="0.8" blue="0.5"/>
+		<unit-requirements>
+		</unit-requirements>
+		<upgrade-requirements />
+		<resource-requirements>
+
+		</resource-requirements>
+		<resources-stored>
+		</resources-stored>
+		<image path="images/temple.jpg"/>
+		<image-cancel path="../archer/images/tech_cancel.bmp"/>
+		<meeting-point value="true" image-path="../barracks/images/meeting_point.bmp"/>
+		<selection-sounds enabled="true">
+		</selection-sounds>
+		<command-sounds enabled="true">
+		</command-sounds>
+	</parameters>
+	<!-- *** skills *** -->
+	<skills>
+		<skill>
+			<type value="be_built" />
+			<name value="be_built_skill"/>
+			<ep-cost value="0" />
+			<speed value="120"/>
+			<speed value="120"/>
+			<anim-speed value="50" />
+			<animation path="models/temple.g3d" />
+			<sound enabled="false" />
+		</skill>
+		<skill>
+			<type value="stop" />
+			<name value="stop_skill"/>
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="50" />
+			<animation path="models/temple.g3d" />
+			<sound enabled="false" />
+						<particles value="true">
+				<particle-file path="stand.xml"/>
+			</particles>
+		</skill>
+
+		<skill>
+			<type value="die" />
+			<name value="die_skill"/>
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="models/temple.g3d" />
+			<particles value="true">
+				<particle-file path="smoke_particles.xml"/>
+				<particle-file path="glow_particles.xml"/>
+			</particles>
+			<sound enabled="true" start-time="0">
+				<sound-file path="$COMMONDATAPATH/sounds/tech_building_fall3.wav"/>
+			</sound>
+			<fade value="false"/>
+		</skill>
+
+	</skills>
+	<!-- *** commands *** -->
+	<commands>
+	</commands>
+</unit>

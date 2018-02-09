@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+
+<upgrade>
+	<image path="images/shield1.bmp"/>
+	<image-cancel path="../advanced_architecture/images/tech_upgrade_cancel.bmp"/>
+	<time value="40"/>
+	<unit-requirements/>
+	<upgrade-requirements/>
+	<resource-requirements>
+		<resource name="diamond" amount="20"/>
+	</resource-requirements>
+	<effects>
+		<unit name="war_ship"/>
+	</effects>
+	<max-hp value="0"/>
+	<max-ep value="0"/>
+	<sight value="11"/>
+	<attack-strenght value="0"/>
+	<attack-range value="11"/>
+	<armor value="100"/>
+	<move-speed value="0"/>
+	<production-speed value="0"/>
+</upgrade>

@@ -1,0 +1,118 @@
+<?xml version="1.0" standalone="no"?>
+
+<tech-tree>
+	<description value="magitech tech tree"/>
+	
+	<attack-types>
+		<attack-type name="ballistic"/>
+		<attack-type name="slashing"/>
+		<attack-type name="piercing"/>
+		<attack-type name="impact"/>
+		<attack-type name="energy"/>
+		<attack-type name="sword"/>
+		<attack-type name="arrow"/>
+		<attack-type name="magic"/>
+		<attack-type name="sword"/>
+		<attack-type name="arrow"/>
+		<attack-type name="magic"/>
+		<attack-type name="slashing"/>
+		<attack-type name="piercing"/>
+		<attack-type name="impact"/>
+		<attack-type name="energy"/>
+		<attack-type name="instant"/>	
+		<attack-type name="slashing"/>
+		<attack-type name="piercing"/>
+		<attack-type name="impact"/>
+		<attack-type name="energy"/>
+		<attack-type name="sword"/>
+		<attack-type name="arrow"/>
+		<attack-type name="magic"/>	
+		<attack-type name="beat"/>	
+		<attack-type name="missle"/>	
+		<attack-type name="physical"/>	
+		<attack-type name="explosive"/>	
+		<attack-type name="frag"/>	
+		<attack-type name="ballastic"/>	
+		<attack-type name="nuclear"/>	
+		<attack-type name="rpg"/>	
+		<attack-type name="instant_kill"/>
+		<attack-type name="venom"/>
+		<attack-type name="batter"/>	
+		<attack-type name="punch"/>	
+		<attack-type name="claw"/>
+		<attack-type name="teeth"/>
+		<attack-type name="poison"/>
+		<attack-type name="sting"/>
+		<attack-type name="hit"/>
+		<attack-type name="zapping"/>
+		<attack-type name="bite"/>
+	</attack-types>
+	
+	<armor-types>
+		<armor-type name="clay"/>
+		<armor-type name="shell"/>
+		<armor-type name="toughskin"/>
+		<armor-type name="skin"/>
+		<armor-type name="organic"/>	
+		<armor-type name="leather"/>
+		<armor-type name="wood"/>		
+		<armor-type name="metal"/>
+		<armor-type name="stone"/>
+		<armor-type name="rock"/>
+		<armor-type name="plate"/>
+		<armor-type name="organic"/>
+		<armor-type name="leather"/>
+		<armor-type name="wood"/>		
+		<armor-type name="metal"/>
+		<armor-type name="stone"/>
+		<armor-type name="rock"/>
+		<armor-type name="plate"/>
+		<armor-type name="organic"/>
+		<armor-type name="organic"/>	
+		<armor-type name="leather"/>
+		<armor-type name="wood"/>		
+		<armor-type name="metal"/>
+		<armor-type name="stone"/>
+		<armor-type name="infantry"/>
+		<armor-type name="building"/>
+		<armor-type name="hide"/>
+		<armor-type name="tank"/>
+		<armor-type name="bone"/>
+	</armor-types>
+	
+	<damage-multipliers>
+
+		<damage-multiplier attack="sting" armor="organic" value="2"/>	
+		<damage-multiplier attack="sting" armor="leather" value="2"/>
+		<damage-multiplier attack="sting" armor="wood" value="0.001"/>	
+		<damage-multiplier attack="sting" armor="metal" value="0.001"/>
+		<damage-multiplier attack="sting" armor="stone" value="0.001"/>
+
+
+		<damage-multiplier attack="ballistic" armor="organic" value="2"/>	
+		<damage-multiplier attack="ballistic" armor="leather" value="2"/>
+		<damage-multiplier attack="ballistic" armor="wood" value="2"/>	
+		<damage-multiplier attack="ballistic" armor="metal" value="2"/>
+		<damage-multiplier attack="ballistic" armor="stone" value="2"/>
+
+		<damage-multiplier attack="piercing" armor="organic" value="1.25"/>	
+		<damage-multiplier attack="piercing" armor="leather" value="1.25"/>
+		<damage-multiplier attack="piercing" armor="wood" value="0.75"/>	
+		<damage-multiplier attack="piercing" armor="metal" value="0.75"/>
+		<damage-multiplier attack="piercing" armor="stone" value="0.5"/>
+		
+		<damage-multiplier attack="impact" armor="organic" value="0.75"/>
+		<damage-multiplier attack="impact" armor="leather" value="0.75"/>
+		<damage-multiplier attack="impact" armor="metal" value="1.5"/>	
+		<damage-multiplier attack="impact" armor="wood" value="1.5"/>			
+		<damage-multiplier attack="impact" armor="stone" value="1.5"/>
+		
+		<damage-multiplier attack="slashing" armor="organic" value="1.25"/>	
+		<damage-multiplier attack="slashing" armor="wood" value="0.75"/>		
+		<damage-multiplier attack="slashing" armor="stone" value="0.5"/>
+		
+		<damage-multiplier attack="energy" armor="organic" value="1.25"/>		
+		<damage-multiplier attack="energy" armor="wood" value="0.75"/>	
+		<damage-multiplier attack="energy" armor="stone" value="0.5"/>		
+	</damage-multipliers>
+</tech-tree>

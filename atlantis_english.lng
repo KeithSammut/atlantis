@@ -1,0 +1,36 @@
+;message headers
+intro=Mission To Atlantis
+
+m0=You have woke up on an island in the pacific ocean, while you were searching for the great underwater city of Atlantis on your cruiser. You lost your cruiser, but you are still determined to find Atlantis.
+m01=You have destroyed the Black Pearl. Beware of pirate ships, and giant crabs
+m02=You have destroyed the Man Of War! Now Beware of the Dutchman. Legend says that the ship can dive under the sea.
+m2=You have destroyed the Dutchman! ... Wait look, a map fell out of the ship!
+m3=It is a map to Atlantis! It says that the gateway to atlantis is on the east.
+m4=You have found the gateway to Atlantis! Your mission is a Success!
+
+;objective strings
+
+ob1=Harvest Wood To Build A Raft
+ob2=Collect Salvage to Equip a Cannon On the Raft, and hunt sea creatures to get food.
+ob3=Go to the center of the map to destroy the Black Pearl with your cannon.
+ob4=Destroy 5 pirate ships and build a war ship to defeat the Man Of War ship in the centre of the map.
+ob04=Collect 20 diamonds by destroying pirate ships, upgrade ship maintenance, find the Dutchman and destroy it.
+ob5=Find the gateway to atlantis in the east of the map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

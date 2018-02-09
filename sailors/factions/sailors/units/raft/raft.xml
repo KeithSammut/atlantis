@@ -1,0 +1,185 @@
+<?xml version="1.0" standalone="no" ?>
+<unit>
+	<!-- *** parameters *** -->
+	<parameters>
+		<size value="3" />
+		<height value="2" />
+		<max-hp value="1000" regeneration="1"/>
+		<max-ep value="0" />
+		<armor value="70" />
+		<armor-type value="wood"/>				
+		<sight value="11" />
+		<time value="40" />
+		<multi-selection value="false" />
+		<cellmap value="false"/>
+		<levels/>
+		<fields>
+			<field value="land" />
+		</fields>
+		<properties>
+			<property value="burnable"/>
+		</properties>
+		<light enabled="false"/>
+		<unit-requirements/>
+		<resource name="food" amount="2"/>
+		<upgrade-requirements />
+		<resource-requirements>
+		<resource name="food" amount="2"/>
+		</resource-requirements>
+		<resources-stored>			
+			<resource name= "food" amount="50"/>	
+			<resource name= "gold" amount="60"/>
+			<resource name= "stone" amount="60"/>
+			<resource name= "wood" amount="60"/>
+		</resources-stored>
+		<image path="../worker/images/worker.bmp"/>
+		<image-cancel path="../archer/images/stop.bmp"/>
+		<meeting-point value="false"/>
+		<selection-sounds enabled="true">
+			<sound path="$COMMONDATAPATH/sounds/worker_select1.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_select2.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_select3.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_select4.wav"/>
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="$COMMONDATAPATH/sounds/worker_ack1.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack2.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack3.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack4.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack5.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack6.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack7.wav"/>
+		</command-sounds>
+	</parameters>
+	
+	<!-- *** skills *** -->
+	<skills>
+	
+			<skill>
+			<type value="be_built" />
+			<name value="be_built_skill"/>
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="models/raft.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+
+		<skill>
+			<type value="stop" />
+			<name value="stop_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="100" />
+			<animation path="models/raft.g3d" />
+			<sound enabled="false" />
+		</skill>
+
+		<skill>
+			<type value="move"/>
+			<name value="move_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="250"/>
+			<anim-speed value="100"/>
+			<animation path="models/raft.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+		
+						<skill>
+			<type value="morph"/>
+			<name value="equip_cannon_skill"/>
+			<ep-cost value="0"/>
+			<speed value="500"/>
+			<anim-speed value="80"/>
+			<animation path="models/raft.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+		
+				<skill>
+			<type value="attack"/>
+			<name value="attack_hunt_skill"/>
+			<ep-cost value="0"/>
+			<speed value="50"/>
+			<anim-speed value="50"/>
+			<animation path="models/raft_hunt.g3d"/>
+			<sound enabled="true" start-time="0.5">
+				<sound-file path="$COMMONDATAPATH/sounds/archer_attack1.wav"/>
+			</sound>
+			<attack-strenght value="75"/>
+			<attack-var value="25"/>
+			<attack-range value="3"/>
+			<attack-type value="piercing"/>
+			<attack-start-time value="0.5"/>
+			<attack-fields>
+				<field value="land"/>
+			</attack-fields>
+			<projectile value="true">
+				<particle value="true" path="particle_spear.xml"/>
+				<sound enabled="true">
+										<sound-file path="sounds/splash3.wav"/>
+					<sound-file path="sounds/splash4.wav"/>
+				</sound>
+			</projectile>
+			<splash value="false"/>
+		</skill>
+						
+		<skill>
+			<type value="die" />
+			<name value="die_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="models/raft_dying.g3d" />
+			<particles value="false"/>
+			<sound enabled="true" start-time="0">
+							
+			</sound>	
+			<fade value="true"/>
+		</skill>
+
+	</skills>
+	
+	<!-- *** commands *** -->
+	<commands>	
+		<command>
+			<type value= "stop"/>
+			<name value="stop"/>
+			<image path="../archer/images/stop.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+		</command>
+
+		<command>
+			<type value= "move"/>
+			<name value="move"/>
+			<image path="../archer/images/move.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+		</command>
+		
+				<command>
+			<type value="attack"/>
+			<name value="hunt"/>
+			<image path="images/hunting.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+			<attack-skill value="attack_hunt_skill"/>
+		</command>
+		
+						<command>
+			<type value="morph"/>
+			<name value="equip_cannon_skill"/>
+			<image path="../worker/images/worker_repair.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<morph-skill value="equip_cannon_skill"/>
+			<morph-unit name= "raft___"/>
+			<discount value="60"/>
+		</command>
+
+	</commands>
+</unit>

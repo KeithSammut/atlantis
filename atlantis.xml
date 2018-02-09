@@ -1,0 +1,641 @@
+<?xml version="1.0" standalone="yes" ?> 
+<scenario>
+	<difficulty value="3"/>
+	<players>
+		<!--Players-->
+		<player control="human" faction="sailors" team="1"/>
+		<player control="cpu" faction="sailors" team="2"/>
+		<player control="cpu" faction="sailors" team="2"/>
+		<!--CPU-->
+		<player control="cpu" faction="sailors" team="2"/>
+		<player control="cpu" faction="sailors" team="2"/>
+		<player control="cpu" faction="sailors" team="2"/>
+		<player control="cpu" faction="sailors" team="2"/>
+		<player control="cpu" faction="sailors" team="2"/>
+	</players>
+	<map value="atlantis"/>
+	<tileset value="forest"/>
+	<tech-tree value="sailors"/>
+	<default-resources value="false"/>
+	<default-units value="false"/>
+	<fog-of-war value="explored"/>
+	<default-victory-conditions value="false"/>
+	<scripts>
+		<startup>
+		
+
+			disableConsume(1)
+			disableConsume(2)
+			disableConsume(3)
+			disableConsume(4)
+			disableConsume(5)
+			disableConsume(6)
+			disableConsume(7)
+			dutchMoveSent = 0
+			dutchMoveSubmerged = 0
+setAttackWarningsEnabled(0)
+showMessage('m0', 'intro')
+setDisplayText('ob1')
+createUnit('worker', 0, startLocation(0))
+you=lastCreatedUnit()
+giveResource('food', 0, 30)
+createUnit('black_pearl', 2, {132, 112})
+ship1=lastCreatedUnit()
+highlightUnit(ship1,1.3,0.2,{0,0,1,0.8})
+
+addCellMarker(0,'Food Site','',startLocation(2))
+addCellMarker(0,'Food Site','',startLocation(3))
+addCellMarker(0,'Food Site','',startLocation(4))
+addCellMarker(0,'Food Site','',startLocation(5))
+addCellMarker(0,'Food Site','',startLocation(6))
+addCellMarker(0,'Food Site','',startLocation(7))
+
+createUnit('perch', 2, {160, 188})
+createUnit('perch', 3, {92, 64})
+createUnit('perch', 4, {164, 116})
+createUnit('perch', 5, {60, 218})
+createUnit('perch', 6, {98, 209})
+createUnit('perch', 7, {48, 114})
+createUnit('perch', 2, {132, 116})
+createUnit('perch', 3, {166, 144})
+createUnit('perch', 2, {160, 188})
+createUnit('perch', 3, {92, 64})
+createUnit('perch', 4, {164, 116})
+createUnit('perch', 5, {60, 218})
+createUnit('perch', 6, {98, 209})
+createUnit('perch', 7, {48, 114})
+createUnit('perch', 2, {132, 116})
+createUnit('perch', 3, {166, 144})
+createUnit('perch', 2, {160, 188})
+createUnit('perch', 3, {92, 64})
+createUnit('perch', 4, {164, 116})
+createUnit('perch', 5, {60, 218})
+createUnit('perch', 6, {98, 209})
+createUnit('perch', 7, {48, 114})
+createUnit('perch', 2, {132, 116})
+createUnit('perch', 3, {166, 144})
+createUnit('perch', 2, {160, 188})
+createUnit('perch', 3, {92, 64})
+createUnit('perch', 4, {164, 116})
+createUnit('perch', 5, {60, 218})
+createUnit('perch', 6, {98, 209})
+createUnit('perch', 7, {48, 114})
+createUnit('perch', 2, {132, 116})
+createUnit('perch', 3, {166, 144})
+createUnit('perch', 2, {160, 188})
+createUnit('perch', 3, {92, 64})
+createUnit('perch', 4, {164, 116})
+
+
+createUnit('octopus', 2, {160, 188})
+createUnit('octopus', 3, {92, 64})
+createUnit('octopus', 4, {164, 116})
+createUnit('octopus', 5, {60, 218})
+createUnit('octopus', 6, {98, 209})
+createUnit('octopus', 7, {48, 114})
+createUnit('octopus', 2, {132, 116})
+createUnit('octopus', 3, {166, 144})
+createUnit('octopus', 2, {160, 188})
+createUnit('octopus', 3, {92, 64})
+createUnit('octopus', 4, {164, 116})
+createUnit('octopus', 5, {60, 218})
+createUnit('octopus', 6, {98, 209})
+createUnit('octopus', 7, {48, 114})
+createUnit('octopus', 2, {132, 116})
+createUnit('octopus', 3, {166, 144})
+
+createUnit('lion_fish', 2, {160, 188})
+createUnit('lion_fish', 3, {92, 64})
+createUnit('lion_fish', 4, {164, 116})
+createUnit('lion_fish', 5, {60, 218})
+createUnit('lion_fish', 6, {98, 209})
+createUnit('lion_fish', 7, {48, 114})
+createUnit('lion_fish', 2, {132, 116})
+createUnit('lion_fish', 3, {166, 144})
+createUnit('lion_fish', 2, {160, 188})
+createUnit('lion_fish', 3, {92, 64})
+createUnit('lion_fish', 4, {164, 116})
+createUnit('lion_fish', 5, {60, 218})
+createUnit('lion_fish', 6, {98, 209})
+createUnit('lion_fish', 7, {48, 114})
+createUnit('lion_fish', 2, {132, 116})
+createUnit('lion_fish', 3, {166, 144})
+
+createUnit('pike', 2, {160, 188})
+createUnit('pike', 3, {92, 64})
+createUnit('pike', 4, {164, 116})
+createUnit('pike', 5, {60, 218})
+createUnit('pike', 6, {98, 209})
+createUnit('pike', 7, {48, 114})
+createUnit('pike', 2, {132, 116})
+createUnit('pike', 3, {166, 144})
+createUnit('pike', 2, {160, 188})
+createUnit('pike', 3, {92, 64})
+createUnit('pike', 4, {164, 116})
+createUnit('pike', 5, {60, 218})
+createUnit('pike', 6, {98, 209})
+createUnit('pike', 7, {48, 114})
+createUnit('pike', 2, {132, 116})
+createUnit('pike', 3, {166, 144})
+
+createUnit('sculpin', 2, {160, 188})
+createUnit('sculpin', 3, {92, 64})
+createUnit('sculpin', 4, {164, 116})
+createUnit('sculpin', 5, {60, 218})
+createUnit('sculpin', 6, {98, 209})
+createUnit('sculpin', 7, {48, 114})
+createUnit('sculpin', 2, {132, 116})
+createUnit('sculpin', 3, {166, 144})
+createUnit('sculpin', 2, {160, 188})
+createUnit('sculpin', 3, {92, 64})
+createUnit('sculpin', 4, {164, 116})
+createUnit('sculpin', 5, {60, 218})
+createUnit('sculpin', 6, {98, 209})
+createUnit('sculpin', 7, {48, 114})
+createUnit('sculpin', 2, {132, 116})
+createUnit('sculpin', 3, {166, 144})
+
+createUnit('stingray', 2, {60, 218})
+createUnit('stingray', 3, {98, 209})
+createUnit('stingray', 4, {48, 114})
+createUnit('stingray', 5, {132, 116})
+createUnit('stingray', 6, {166, 144})
+
+createUnit('salvage', 6, {160, 188})
+s1 = lastCreatedUnit()
+addCellMarker(0,'Salvage Site','',{160, 188})
+createUnit('salvage', 6, {92, 64})
+s2 = lastCreatedUnit()
+addCellMarker(0,'Salvage Site','',{92, 64})
+createUnit('salvage', 6, {164, 116})
+s3 = lastCreatedUnit()
+addCellMarker(0,'Salvage Site','',{164, 116})
+createUnit('salvage', 6, {60, 218})
+s4 = lastCreatedUnit()
+addCellMarker(0,'Salvage Site','',{60, 218})
+createUnit('salvage', 6, {98, 209})
+s5 = lastCreatedUnit()
+addCellMarker(0,'Salvage Site','',{98, 209})
+createUnit('salvage', 6, {48, 114})
+s6 = lastCreatedUnit()
+addCellMarker(0,'Salvage Site','',{48, 114})
+		</startup>
+		
+<unitDied>
+		
+unitB = lastDeadUnitKiller()
+unitA = lastDeadUnit()
+
+if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	   if lastDeadUnitName() == 'octopus' then
+
+	giveResource('food', unitFaction(unitB) , 10)
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('octopus', unitFaction(unitA), {x1, y1})
+
+	end
+  end
+end
+
+if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	   if lastDeadUnitName() == 'stingray' then
+
+	giveResource('food', unitFaction(unitB) , 25)
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('stingray', unitFaction(unitA), {x1, y1})
+
+	end
+  end
+end
+
+if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	   if lastDeadUnitName() == 'perch' then
+
+	giveResource('food', unitFaction(unitB) , 3)
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('perch', unitFaction(unitA), {x1, y1})
+
+	end
+  end
+end
+
+if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	   if lastDeadUnitName() == 'lion_fish' then
+
+	giveResource('food', unitFaction(unitB) , 5)
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('lion_fish', unitFaction(unitA), {x1, y1})
+
+	end
+  end
+end
+
+if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	   if lastDeadUnitName() == 'pike' then
+
+	giveResource('food', unitFaction(unitB) , 8)
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('pike', unitFaction(unitA), {x1, y1})
+
+	end
+  end
+end
+
+if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	   if lastDeadUnitName() == 'sculpin' then
+
+	giveResource('food', unitFaction(unitB) , 4)
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('sculpin', unitFaction(unitA), {x1, y1})
+
+	end
+  end
+end
+
+if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	   if lastDeadUnitName() == 'giant_crab' then
+	
+	giveResource('food', unitFaction(unitB) , 100)
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('giant_crab', unitFaction(unitA), {x1, y1})
+
+	end
+  end
+end
+
+if lastDeadUnitCauseOfDeath() ~= 3 then
+
+	if unitFaction(unitB) ~= unitFaction(unitA) then
+	
+	   if lastDeadUnitName() == 'pirate_ship' then
+
+	giveResource('diamond', unitFaction(unitB) , 1)
+
+	end
+  end
+end
+
+if lastDeadUnit()== s1 then
+
+	removeCellMarker(0, {160, 188})
+	giveResource('gold', unitFaction(unitB), 20)
+	giveResource('wood', unitFaction(unitB), 20)
+	giveResource('stone', unitFaction(unitB), 20)
+
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('salvage', 6, {x1, y1})
+			
+		end
+
+if lastDeadUnit()== s2 then
+
+	removeCellMarker(0, {92, 64})
+	giveResource('gold', unitFaction(unitB), 20)
+	giveResource('wood', unitFaction(unitB), 20)
+	giveResource('stone', unitFaction(unitB), 20)
+
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('salvage', 6, {x1, y1})
+			
+		end
+
+if lastDeadUnit()== s3 then
+
+	removeCellMarker(0, {164, 116})
+	giveResource('gold', unitFaction(unitB), 20)
+	giveResource('wood', unitFaction(unitB), 20)
+	giveResource('stone', unitFaction(unitB), 20)
+
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('salvage', 6, {x1, y1})
+			
+		end
+
+if lastDeadUnit()== s4 then
+
+	removeCellMarker(0, {60, 218})
+	giveResource('gold', unitFaction(unitB), 20)
+	giveResource('wood', unitFaction(unitB), 20)
+	giveResource('stone', unitFaction(unitB), 20)
+
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('salvage', 6, {x1, y1})
+			
+		end
+
+if lastDeadUnit()== s5 then
+
+	removeCellMarker(0, {98, 209})
+	giveResource('gold', unitFaction(unitB), 20)
+	giveResource('wood', unitFaction(unitB), 20)
+	giveResource('stone', unitFaction(unitB), 20)
+
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('salvage', 6, {x1, y1})
+			
+		end
+		
+if lastDeadUnit()== s6 then
+
+	removeCellMarker(0, {48, 114})
+	giveResource('gold', unitFaction(unitB), 20)
+	giveResource('wood', unitFaction(unitB), 20)
+	giveResource('stone', unitFaction(unitB), 20)
+
+	x1 = getRandomGen(36, 255)
+	y1 = getRandomGen(1, 255)
+	createUnit('salvage', 6, {x1, y1})
+			
+		end
+
+if lastDeadUnitName()=='raft' then
+
+		createUnit('worker_', 0, startLocation(0))
+			setCameraPosition(startLocation(0))
+
+
+end
+
+if lastDeadUnitName()=='raft___' then
+
+createUnit('raft', 0, {38, 114})
+			setCameraPosition({38, 114})
+
+
+end
+
+if lastDeadUnitName()=='war_ship' then
+		createUnit('raft___', 0, {38, 114})
+		you=lastCreatedUnit()
+			setCameraPosition({38, 114})
+
+
+end
+
+if lastDeadUnitName()=='worker' then
+
+		createUnit('worker', 0, startLocation(0))
+			setCameraPosition(startLocation(0))
+
+end
+
+if lastDeadUnitName()=='worker_' then
+
+		createUnit('worker_', 0, startLocation(0))
+			setCameraPosition(startLocation(0))
+
+end
+
+if lastDeadUnitName()=='black_pearl' then
+
+showMessage('m01', 'intro')
+			setDisplayText('ob4')
+				togglePauseGame(1);
+				giveResource('gold', unitFaction(unitB), 200)
+	giveResource('wood', unitFaction(unitB), 200)
+	giveResource('stone', unitFaction(unitB), 200)
+	
+	createUnit('man_of_war', 3, startLocation(2))
+	mow = lastCreatedUnit()
+	highlightUnit(mow,1.3,0.2,{-1,-1,-1,-1})
+	createUnit('pirate_ship', 1, {12, 16})
+	createUnit('pirate_ship', 1, {140, 16})
+	createUnit('pirate_ship', 1, {238, 40})
+	createUnit('pirate_ship', 1, {234, 150})
+	createUnit('pirate_ship', 1, {226, 198})
+	createUnit('pirate_ship', 1, {206, 246})
+	createUnit('pirate_ship', 1, {152, 242})
+	createUnit('pirate_ship', 1, {92, 242})
+	createUnit('pirate_ship', 1, {20, 204})
+	createUnit('pirate_ship', 1, {166, 98})
+	createUnit('giant_crab', 4, {12, 16})
+	createUnit('giant_crab', 4, {140, 16})
+	createUnit('giant_crab', 4, {238, 40})
+	createUnit('giant_crab', 4, {234, 150})
+	createUnit('giant_crab', 4, {226, 198})
+	createUnit('giant_crab', 4, {206, 246})
+	createUnit('giant_crab', 4, {152, 242})
+	createUnit('giant_crab', 4, {92, 242})
+	createUnit('giant_crab', 4, {20, 204})
+	createUnit('giant_crab', 4, {166, 98})
+
+
+end
+
+if lastDeadUnit()== mow then
+
+	showMessage('m02', 'intro')
+	setDisplayText('ob04')
+	togglePauseGame(1);
+
+	giveResource('gold', unitFaction(unitB), 200)
+	giveResource('wood', unitFaction(unitB), 200)
+	giveResource('stone', unitFaction(unitB), 200)
+	
+	createUnit('dutchman', 2, startLocation(2))
+	
+	createUnit('pirate_ship', 1, {12, 16})
+	createUnit('pirate_ship', 1, {140, 16})
+	createUnit('pirate_ship', 1, {238, 40})
+	createUnit('pirate_ship', 1, {234, 150})
+	createUnit('pirate_ship', 1, {226, 198})
+	createUnit('pirate_ship', 1, {206, 246})
+	createUnit('pirate_ship', 1, {152, 242})
+	createUnit('pirate_ship', 1, {92, 242})
+	createUnit('pirate_ship', 1, {20, 204})
+	createUnit('pirate_ship', 1, {166, 98})
+	createUnit('pirate_ship', 1, {12, 16})
+	createUnit('pirate_ship', 1, {140, 16})
+	createUnit('pirate_ship', 1, {238, 40})
+	createUnit('pirate_ship', 1, {234, 150})
+	createUnit('pirate_ship', 1, {226, 198})
+	createUnit('pirate_ship', 1, {206, 246})
+	createUnit('pirate_ship', 1, {152, 242})
+	createUnit('pirate_ship', 1, {92, 242})
+	createUnit('pirate_ship', 1, {20, 204})
+	createUnit('pirate_ship', 1, {166, 98})
+	
+end
+
+if lastDeadUnitName()=='dutchman' then
+
+	showMessage('m2', 'intro')
+	showMessage('m3', 'intro')
+	setDisplayText('ob5')
+
+	giveResource('gold', unitFaction(unitB), 200)
+	giveResource('wood', unitFaction(unitB), 200)
+	giveResource('stone', unitFaction(unitB), 200)
+
+	createUnit('giant_crab', 4, {12, 16})
+	createUnit('giant_crab', 4, {140, 16})
+	createUnit('giant_crab', 4, {238, 40})
+	createUnit('giant_crab', 4, {234, 150})
+	createUnit('giant_crab', 4, {226, 198})
+	createUnit('giant_crab', 4, {206, 246})
+	createUnit('giant_crab', 4, {152, 242})
+	createUnit('giant_crab', 4, {92, 242})
+	createUnit('giant_crab', 4, {20, 204})
+	createUnit('giant_crab', 4, {166, 98})
+	
+	
+	createUnit('temple', 0, {245, 110})
+	temple=lastCreatedUnit()
+	togglePauseGame(1);
+	
+	cell_event = registerCellTriggerEventForUnitToUnit(you, temple)
+	
+end
+
+				
+
+		</unitDied>	
+<cellTriggerEvent>   
+	if triggeredCellEventId() == cell_event then 
+	
+	showMessage('m4', 'intro')
+	togglePauseGame(1);
+
+
+		unregisterCellTriggerEvent(cell_event);
+		cell_event2 = registerCellTriggerEventForUnitToLocation(you, {245, 110})
+	  end
+	  
+	  	if triggeredCellEventId() == cell_event2 then 
+	
+		setPlayerAsWinner(0)
+		endGame()
+
+		unregisterCellTriggerEvent(cell_event2);
+	  end
+	  
+
+	  
+	 if triggeredCellEventId() == dutchmanemerge then 
+			
+			morphToUnit(dutchmansubmerged, 'dutchman' , 1)
+
+			unregisterCellTriggerEvent(dutchmanemerge);
+	end
+</cellTriggerEvent>
+<unitCreatedOfType type="war_ship">
+			if unitCountOfType(0, 'war_ship')>=1 then
+			you = lastCreatedUnit()
+	end	
+	
+</unitCreatedOfType>
+<unitCreatedOfType type="salvage">
+			if unitCountOfType(6, 'salvage')>=1 then
+			salvage = lastCreatedUnit()
+	end	
+	
+</unitCreatedOfType>
+<unitCreatedOfType type="raft_">
+			if unitCountOfType(0, 'raft_')>=1 then
+			r = lastCreatedUnit()
+			createUnit('raft', 0, {38, 114})
+			setCameraPosition({38, 114})
+			destroyUnit(r)
+			setDisplayText('ob2')
+			giveResource('food', 0, 30)
+	end	
+	
+</unitCreatedOfType>
+<unitCreatedOfType type="raft__">
+			if unitCountOfType(0, 'raft__')>=1 then
+			r = lastCreatedUnit()
+			createUnit('raft', 0, {38, 114})
+			setCameraPosition({38, 114})
+			destroyUnit(r)
+	end	
+	
+</unitCreatedOfType>
+<unitCreatedOfType type="raft___">
+			if unitCountOfType(0, 'raft___')>=1 then
+			you = lastCreatedUnit()
+			giveResource('food', 0, 30)
+	end	
+	
+</unitCreatedOfType>	
+<unitCreatedOfType type="raft">
+			if unitCountOfType(0, 'raft')>=1 then
+			you = lastCreatedUnit()
+			setDisplayText('ob2')
+	end	
+	
+</unitCreatedOfType>
+<unitCreatedOfType type="dutchman_">
+			if unitCountOfType(2, 'dutchman_')>=1 then
+			dutchmansubmerged = lastCreatedUnit()
+	end	
+	
+</unitCreatedOfType>
+<unitCreatedOfType type="dutchman">
+			if unitCountOfType(2, 'dutchman')>=1 then
+			dutchman = lastCreatedUnit()
+			highlightUnit(dutchman,1.3,0.2,{0,1,0,0.8})
+
+	end	
+	
+</unitCreatedOfType>
+		<unitTriggerEvent>
+			  			if getUnitProperty(lastUnitTriggerEventUnit(),lastUnitTriggerEventType()) and lastUnitTriggerEventType() == 1 then
+				x1 = getRandomGen(36, 255)
+				y1 = getRandomGen(1, 255)
+						if getUnitProperty(dutchman,1) &lt;= 2000 then
+					dutchMoveSent = 0
+					dutchMoveSubmerged = 1
+					morphToUnit(dutchman, dutchman_, 1)
+					if dutchMoveSubmerged == 0 then
+						givePositionCommand(dutchmansubmerged, move, {x1,y1})
+						dutchMoveSubmerged = 1
+					end
+					dutchmanemerge = registerCellTriggerEventForUnitToLocation(dutchmansubmerged, {x1, y1})
+				elseif getUnitProperty(dutchman,1) &lt;= 3000 then
+					dutchMoveSubmerged = 0
+					if dutchMoveSent == 0 then
+						givePositionCommand(dutchman, move, {x1,y1})
+						dutchMoveSent = 1
+					end
+				end
+			end
+		</unitTriggerEvent>	
+	</scripts>		
+</scenario>
+
+
+
+

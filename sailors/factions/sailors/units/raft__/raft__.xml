@@ -1,0 +1,121 @@
+<?xml version="1.0" standalone="no" ?>
+<unit>
+	<!-- *** parameters *** -->
+	<parameters>
+		<size value="3" />
+		<height value="2" />
+		<max-hp value="1000" regeneration="0"/>
+		<max-ep value="0" />
+		<armor value="70" />
+		<armor-type value="wood"/>				
+		<sight value="10" />
+		<time value="40" />
+		<multi-selection value="false" />
+		<cellmap value="false"/>
+		<levels/>
+		<fields>
+			<field value="land" />
+		</fields>
+		<properties>
+			<property value="burnable"/>
+		</properties>
+		<light enabled="false"/>
+		<unit-requirements/>
+		<upgrade-requirements />
+		<resource-requirements>
+		</resource-requirements>
+		<resources-stored>			
+		</resources-stored>
+		<image path="../worker/images/worker.bmp"/>
+		<image-cancel path="../archer/images/stop.bmp"/>
+		<meeting-point value="false"/>
+		<selection-sounds enabled="true">
+			<sound path="$COMMONDATAPATH/sounds/worker_select1.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_select2.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_select3.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_select4.wav"/>
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="$COMMONDATAPATH/sounds/worker_ack1.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack2.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack3.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack4.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack5.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack6.wav"/>
+			<sound path="$COMMONDATAPATH/sounds/worker_ack7.wav"/>
+		</command-sounds>
+	</parameters>
+	
+	<!-- *** skills *** -->
+	<skills>
+	
+			<skill>
+			<type value="be_built" />
+			<name value="be_built_skill"/>
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="models/raft.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+
+
+		<skill>
+			<type value="stop" />
+			<name value="stop_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="100" />
+			<animation path="models/raft.g3d" />
+			<sound enabled="false" />
+		</skill>
+
+		<skill>
+			<type value="move"/>
+			<name value="move_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="180"/>
+			<anim-speed value="100"/>
+			<animation path="models/raft.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+						
+		<skill>
+			<type value="die" />
+			<name value="die_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="models/raft_dying.g3d" />
+			<particles value="false"/>
+			<sound enabled="true" start-time="0">							
+			</sound>	
+			<fade value="false"/>
+		</skill>
+
+	</skills>
+	
+	<!-- *** commands *** -->
+	<commands>	
+		<command>
+			<type value= "stop"/>
+			<name value="stop"/>
+			<image path="../archer/images/stop.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+		</command>
+
+		<command>
+			<type value= "move"/>
+			<name value="move"/>
+			<image path="../archer/images/move.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+		</command>
+		
+
+	</commands>
+</unit>
