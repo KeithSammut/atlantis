@@ -34,11 +34,11 @@
 		<image-cancel path="images/tech_cancel.bmp"/>					
 		<meeting-point value="false"/>					
 		<selection-sounds enabled="true">					
-			<sound path="sounds/technician_select1.wav"/>				
+			
 							
 		</selection-sounds>					
 		<command-sounds enabled="true">					
-			<sound path="sounds/technician_ack1.wav"/>				
+			
 							
 		</command-sounds>					
 							
