@@ -31,7 +31,7 @@
 		</resource-requirements>					
 		<resources-stored/>					
 		<image path="images/airship.bmp"/>					
-		<image-cancel path="../archer/images/tech_cancel.bmp"/>					
+		<image-cancel path="images/tech_cancel.bmp"/>					
 		<meeting-point value="false"/>					
 		<selection-sounds enabled="true">					
 			<sound path="sounds/technician_select1.wav"/>				
@@ -128,7 +128,7 @@
                 <command>							
 			<type value="stop"/>				
 			<name value="stop"/>				
-			<image path="../archer/images/tech_stop.bmp"/>				
+			<image path="images/tech_stop.bmp"/>				
 			<unit-requirements/>				
 			<upgrade-requirements/>				
 			<stop-skill value="stop_skill"/>				
@@ -137,7 +137,7 @@
 		<command>					
 			<type value="move"/>				
 			<name value="move"/>				
-			<image path="../archer/images/tech_move.bmp"/>				
+			<image path="images/tech_move.bmp"/>				
 			<unit-requirements/>				
 			<upgrade-requirements/>				
 			<move-skill value="move_skill"/>				
@@ -158,7 +158,7 @@
                 <command>							
 			<type value="attack_stopped"/>				
 			<name value="hold_position"/>				
-			<image path="../archer/images/tech_hold.bmp"/>				
+			<image path="images/tech_hold.bmp"/>				
 			<unit-requirements/>				
 			<upgrade-requirements/>				
 			<stop-skill value="stop_skill"/>				

@@ -33,7 +33,7 @@
 			<resource name= "wood" amount="60"/>
 		</resources-stored>
 		<image path="../worker/images/worker.bmp"/>
-		<image-cancel path="../archer/images/stop.bmp"/>
+		<image-cancel path="images/stop.bmp"/>
 		<meeting-point value="false"/>
 		<selection-sounds enabled="true">
 			<sound path="$COMMONDATAPATH/sounds/worker_select1.wav"/>
@@ -145,7 +145,7 @@
 		<command>
 			<type value= "stop"/>
 			<name value="stop"/>
-			<image path="../archer/images/stop.bmp"/>
+			<image path="images/stop.bmp"/>
 			<unit-requirements/>
 			<upgrade-requirements/>
 			<stop-skill value="stop_skill"/>
@@ -154,7 +154,7 @@
 		<command>
 			<type value= "move"/>
 			<name value="move"/>
-			<image path="../archer/images/move.bmp"/>
+			<image path="images/move.bmp"/>
 			<unit-requirements/>
 			<upgrade-requirements/>
 			<move-skill value="move_skill"/>
