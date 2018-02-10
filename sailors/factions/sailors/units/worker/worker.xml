@@ -34,35 +34,25 @@
 		<image-cancel path="images/tech_cancel.bmp"/>
 		<meeting-point value="false"/>
 		<selection-sounds enabled="true">
-			<sound path="$COMMONDATAPATH/sounds/worker_select1.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select2.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select3.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select4.wav"/>
+			<sound path="sounds/worker_select1.wav"/>
+			<sound path="sounds/worker_select2.wav"/>
+			<sound path="sounds/worker_select3.wav"/>
+			<sound path="sounds/worker_select4.wav"/>
 		</selection-sounds>
 		<command-sounds enabled="true">
-			<sound path="$COMMONDATAPATH/sounds/worker_ack1.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack2.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack3.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack4.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack5.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack6.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack7.wav"/>
+			<sound path="sounds/worker_ack1.wav"/>
+			<sound path="sounds/worker_ack2.wav"/>
+			<sound path="sounds/worker_ack3.wav"/>
+			<sound path="sounds/worker_ack4.wav"/>
+			<sound path="sounds/worker_ack5.wav"/>
+			<sound path="sounds/worker_ack6.wav"/>
+			<sound path="sounds/worker_ack7.wav"/>
 		</command-sounds>
 	</parameters>
 
 	<!-- *** skills *** -->
 
 	<skills>
-	
-			<skill>
-			<type value="be_built" />
-			<name value="be_built_skill"/>
-			<ep-cost value="0" />
-			<speed value="300" />
-			<anim-speed value="300" />
-			<animation path="models/worker_standing.g3d" />
-			<sound enabled="false" />
-		</skill>
 
 		<skill>
 			<type value="stop"/>
@@ -81,16 +71,6 @@
 			<speed value="500"/>
 			<anim-speed value="80"/>
 			<animation path="models/worker_raft.g3d"/>
-			<sound enabled="false"/>
-		</skill>
-
-		<skill>
-			<type value="stop"/>
-			<name value="stop_loaded_skill"/>
-			<ep-cost value="0"/>
-			<speed value="75"/>
-			<anim-speed value="70"/>
-			<animation path="models/worker_standing_loaded.g3d"/>
 			<sound enabled="false"/>
 		</skill>
 
@@ -126,26 +106,6 @@
 
 		<skill>
 			<type value="move"/>
-			<name value="move_gold_skill"/>
-			<ep-cost value="0"/>
-			<speed value="210"/>
-			<anim-speed value="130"/>
-			<animation path="models/worker_walking_gold.g3d"/>
-			<sound enabled="false"/>
-		</skill>
-
-		<skill>
-			<type value="move"/>
-			<name value="move_loaded_skill"/>
-			<ep-cost value="0"/>
-			<speed value="190"/>
-			<anim-speed value="100"/>
-			<animation path="models/worker_walking_loaded.g3d"/>
-			<sound enabled="false"/>
-		</skill>
-
-		<skill>
-			<type value="move"/>
 			<name value="move_loaded_wood_skill"/>
 			<ep-cost value="0"/>
 			<speed value="190"/>
@@ -156,32 +116,15 @@
 
 		<skill>
 			<type value="harvest"/>
-			<name value="mine_skill"/>
-			<ep-cost value="0"/>
-			<speed value="600"/>
-			<anim-speed value="90"/>
-			<animation path="models/worker_mining.g3d"/>
-			<sound enabled="true" start-time="0.5">
-				<sound-file path="$COMMONDATAPATH/sounds/worker_mine1.wav"/>
-				<sound-file path="$COMMONDATAPATH/sounds/worker_mine2.wav"/>
-				<sound-file path="$COMMONDATAPATH/sounds/worker_mine3.wav"/>
-				<sound-file path="$COMMONDATAPATH/sounds/worker_mine4.wav"/>
-				<sound-file path="$COMMONDATAPATH/sounds/worker_mine5.wav"/>
-				<sound-file path="$COMMONDATAPATH/sounds/worker_mine6.wav"/>
-			</sound>
-		</skill>
-
-		<skill>
-			<type value="harvest"/>
 			<name value="harvest_wood_skill"/>
 			<ep-cost value="0"/>
 			<speed value="600"/>
 			<anim-speed value="150"/>
 			<animation path="models/worker_harversting_wood.g3d"/>
 			<sound enabled="true" start-time="0.5">
-				<sound-file path="$COMMONDATAPATH/sounds/worker_harvest_wood1.wav"/>
-				<sound-file path="$COMMONDATAPATH/sounds/worker_harvest_wood2.wav"/>
-				<sound-file path="$COMMONDATAPATH/sounds/worker_harvest_wood3.wav"/>
+				<sound-file path="sounds/worker_harvest_wood1.wav"/>
+				<sound-file path="sounds/worker_harvest_wood2.wav"/>
+				<sound-file path="sounds/worker_harvest_wood3.wav"/>
 			</sound>
 		</skill>
 
@@ -220,24 +163,6 @@
 			<unit-requirements/>
 			<upgrade-requirements/>
 			<move-skill value="move_skill"/>
-		</command>
-
-		<command>
-			<type value="harvest"/>
-			<name value="mine"/>
-			<image path="images/worker_mine.bmp"/>
-			<unit-requirements/>
-			<upgrade-requirements/>
-			<move-skill value="move_gold_skill"/>
-			<harvest-skill value="mine_skill"/>
-			<stop-loaded-skill value="stop_loaded_skill"/>
-			<move-loaded-skill value="move_loaded_skill"/>
-			<harvested-resources>
-				<resource name="gold"/>
-				<resource name="stone"/>
-			</harvested-resources>
-			<max-load value="25"/>
-			<hits-per-unit value="1"/>
 		</command>
 
 		<command>

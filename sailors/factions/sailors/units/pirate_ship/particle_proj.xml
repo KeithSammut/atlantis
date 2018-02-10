@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <projectile-particle-system>
-    	<texture value="true" luminance="true" path="../archer/images/archer_particle.bmp"/>
+    	<texture value="true" luminance="true" path="images/particle.bmp"/>
     	<model value="true" path="models/arrow.g3d"/>
 	<primitive value="line"/>
 	<offset x="0" y="1.7" z="1"/>

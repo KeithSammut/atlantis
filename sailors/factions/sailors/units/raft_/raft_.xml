@@ -33,19 +33,8 @@
 		<image-cancel path="../worker/images/worker.bmp"/>
 		<meeting-point value="false"/>
 		<selection-sounds enabled="true">
-			<sound path="$COMMONDATAPATH/sounds/worker_select1.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select2.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select3.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select4.wav"/>
 		</selection-sounds>
 		<command-sounds enabled="true">
-			<sound path="$COMMONDATAPATH/sounds/worker_ack1.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack2.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack3.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack4.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack5.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack6.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack7.wav"/>
 		</command-sounds>
 	</parameters>
 	
@@ -58,7 +47,7 @@
 			<ep-cost value="0" />
 			<speed value="300" />
 			<anim-speed value="300" />
-			<animation path="models/raft.g3d" />
+			<animation path="../raft/models/raft.g3d" />
 			<sound enabled="false" />
 		</skill>
 		
@@ -70,7 +59,7 @@
 			<ep-cost value="0" />
 			<speed value="300" />
 			<anim-speed value="100" />
-			<animation path="models/raft.g3d" />
+			<animation path="../raft/models/raft.g3d" />
 			<sound enabled="false" />
 		</skill>
 
@@ -80,7 +69,7 @@
 			<ep-cost value="0"/>
 			<speed value="180"/>
 			<anim-speed value="100"/>
-			<animation path="models/raft.g3d"/>
+			<animation path="../raft/models/raft.g3d"/>
 			<sound enabled="false"/>
 		</skill>
 						
@@ -90,7 +79,7 @@
 			<ep-cost value="0" />
 			<speed value="300" />
 			<anim-speed value="300" />
-			<animation path="models/raft_dying.g3d" />
+			<animation path="../raft/models/raft_dying.g3d" />
 			<particles value="false"/>
 			<sound enabled="true" start-time="0">							
 			</sound>	

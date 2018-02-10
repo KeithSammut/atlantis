@@ -82,8 +82,8 @@
 			</attack-fields>
 			<projectile value="true">
 				<sound enabled="true">
-										<sound-file path="sounds/splash3.wav"/>
-					<sound-file path="sounds/splash4.wav"/>
+					<sound-file path="../raft/sounds/splash3.wav"/>
+					<sound-file path="../raft/sounds/splash4.wav"/>
 				</sound>
 			</projectile>
 			<splash value="false"/>
