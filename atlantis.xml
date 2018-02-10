@@ -38,6 +38,7 @@ showMessage('m0', 'intro')
 setDisplayText('ob1')
 createUnit('worker', 0, startLocation(0))
 you=lastCreatedUnit()
+selectUnit(you)
 giveResource('food', 0, 30)
 createUnit('black_pearl', 2, {132, 112})
 ship1=lastCreatedUnit()
@@ -430,7 +431,7 @@ showMessage('m01', 'intro')
 	
 	createUnit('man_of_war', 3, startLocation(2))
 	mow = lastCreatedUnit()
-	highlightUnit(mow,1,0.2,{-1,-1,-1,-1})
+	highlightUnit(mow,1,0.2,{0,0,1,0.8})
 	createUnit('pirate_ship', 1, {12, 16})
 	createUnit('pirate_ship', 1, {140, 16})
 	createUnit('pirate_ship', 1, {238, 40})
@@ -570,7 +571,6 @@ end
 			setCameraPosition({38, 114})
 			destroyUnit(r)
 			setDisplayText('ob2')
-			giveResource('food', 0, 30)
 	end	
 	
 </unitCreatedOfType>
@@ -586,6 +586,7 @@ end
 <unitCreatedOfType type="raft___">
 			if unitCountOfType(0, 'raft___')>=1 then
 			you = lastCreatedUnit()
+			selectUnit(you)
 			giveResource('food', 0, 30)
 	end	
 	
@@ -594,6 +595,8 @@ end
 			if unitCountOfType(0, 'raft')>=1 then
 			you = lastCreatedUnit()
 			setDisplayText('ob2')
+			selectUnit(you)
+			giveResource('food', 0, 30)
 	end	
 	
 </unitCreatedOfType>
@@ -606,13 +609,13 @@ end
 <unitCreatedOfType type="dutchman">
 			if unitCountOfType(2, 'dutchman')>=1 then
 			dutchman = lastCreatedUnit()
-			highlightUnit(dutchman,1,0.2,{0,1,0,0.8})
+			highlightUnit(dutchman,1,0.2,{0,0,1,0.8})
 
 	end	
 	
 </unitCreatedOfType>
 		<unitTriggerEvent>
-			  			if getUnitProperty(lastUnitTriggerEventUnit(),lastUnitTriggerEventType()) and lastUnitTriggerEventType() == 1 then
+			  	if dutchman == lastUnitTriggerEventUnit() and lastUnitTriggerEventType() == 1 and getUnitProperty(lastUnitTriggerEventUnit(),lastUnitTriggerEventType()) then
 				x1 = getRandomGen(36, 255)
 				y1 = getRandomGen(1, 255)
 						if getUnitProperty(dutchman,1) &lt;= 2000 then
@@ -624,7 +627,7 @@ end
 						dutchMoveSubmerged = 1
 					end
 					dutchmanemerge = registerCellTriggerEventForUnitToLocation(dutchmansubmerged, {x1, y1})
-				elseif getUnitProperty(dutchman,1) &lt;= 3000 then
+				else if getUnitProperty(dutchman,1) &lt;= 3000 then
 					dutchMoveSubmerged = 0
 					if dutchMoveSent == 0 then
 						givePositionCommand(dutchman, move, {x1,y1})
@@ -632,6 +635,7 @@ end
 					end
 				end
 			end
+		end
 		</unitTriggerEvent>	
 	</scripts>		
 </scenario>

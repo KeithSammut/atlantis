@@ -39,19 +39,19 @@
 		<image-cancel path="images/stop.bmp"/>
 		<meeting-point value="false"/>
 		<selection-sounds enabled="true">
-			<sound path="$COMMONDATAPATH/sounds/worker_select1.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select2.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select3.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_select4.wav"/>
+			<sound path="../worker/sounds/worker_select1.wav"/>
+			<sound path="../worker/sounds/worker_select2.wav"/>
+			<sound path="../worker/sounds/worker_select3.wav"/>
+			<sound path="../worker/sounds/worker_select4.wav"/>
 		</selection-sounds>
 		<command-sounds enabled="true">
-			<sound path="$COMMONDATAPATH/sounds/worker_ack1.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack2.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack3.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack4.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack5.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack6.wav"/>
-			<sound path="$COMMONDATAPATH/sounds/worker_ack7.wav"/>
+			<sound path="../worker/sounds/worker_ack1.wav"/>
+			<sound path="../worker/sounds/worker_ack2.wav"/>
+			<sound path="../worker/sounds/worker_ack3.wav"/>
+			<sound path="../worker/sounds/worker_ack4.wav"/>
+			<sound path="../worker/sounds/worker_ack5.wav"/>
+			<sound path="../worker/sounds/worker_ack6.wav"/>
+			<sound path="../worker/sounds/worker_ack7.wav"/>
 		</command-sounds>
 	</parameters>
 	
@@ -107,7 +107,7 @@
 			<anim-speed value="50"/>
 			<animation path="models/raft_hunt.g3d"/>
 			<sound enabled="true" start-time="0.5">
-				<sound-file path="$COMMONDATAPATH/sounds/archer_attack1.wav"/>
+				<sound-file path="../raft/sounds/archer_attack1.wav"/>
 			</sound>
 			<attack-strenght value="75"/>
 			<attack-var value="25"/>
@@ -118,10 +118,10 @@
 				<field value="land"/>
 			</attack-fields>
 			<projectile value="true">
-				<particle value="true" path="particle_spear.xml"/>
+				<particle value="true" path="../raft/particle_spear.xml"/>
 				<sound enabled="true">
-										<sound-file path="sounds/splash3.wav"/>
-					<sound-file path="/sounds/splash4.wav"/>
+										<sound-file path="../raft/sounds/splash3.wav"/>
+					<sound-file path="../raft/sounds/splash4.wav"/>
 				</sound>
 			</projectile>
 			<splash value="false"/>
@@ -148,8 +148,8 @@
 			<projectile value="true">
 				<particle value="true" path="particle_cannon.xml"/>
 				<sound enabled="true">
-										<sound-file path="sounds/splash2.wav"/>
-					<sound-file path="sounds/splash1.wav"/>
+										<sound-file path="../raft/sounds/splash2.wav"/>
+					<sound-file path="../raft/sounds/splash1.wav"/>
 				</sound>
 			</projectile>
 						<splash value="true">
@@ -165,7 +165,7 @@
 			<ep-cost value="0" />
 			<speed value="300" />
 			<anim-speed value="300" />
-			<animation path="models/raft_dying.g3d" />
+			<animation path="../raft/models/raft_dying.g3d" />
 			<particles value="false"/>
 			<sound enabled="true" start-time="0">
 							

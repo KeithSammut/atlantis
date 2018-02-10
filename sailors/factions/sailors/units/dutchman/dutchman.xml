@@ -33,20 +33,8 @@
 		<image-cancel path="images/tech_cancel.bmp"/>
 		<meeting-point value="false"/>
 		<selection-sounds enabled="true">
-			<sound path="sounds/guard_select1.wav"/>					
-			<sound path="sounds/guard_select2.wav"/>					
-			<sound path="sounds/guard_select3.wav"/>					
-			<sound path="sounds/guard_select4.wav"/>					
-			<sound path="sounds/guard_select5.wav"/>
 		</selection-sounds>
 		<command-sounds enabled="true">
-			<sound path="sounds/guard_ack1.wav"/>					
-			<sound path="sounds/guard_ack2.wav"/>					
-			<sound path="sounds/guard_ack3.wav"/>					
-			<sound path="sounds/guard_ack4.wav"/>					
-			<sound path="sounds/guard_ack5.wav"/>					
-			<sound path="sounds/guard_ack6.wav"/>					
-			<sound path="sounds/guard_ack7.wav"/>	
 		</command-sounds>
 	</parameters>
 
@@ -62,7 +50,7 @@
 			<particles value="false">
 			</particles>
 										<sound enabled="true" start-time="0">
-					<sound-file path="/sounds/fly.wav"/>
+					<sound-file path="sounds/fly.wav"/>
 				</sound>
 		</skill>
 		
@@ -80,7 +68,7 @@
 			</particles>
 			<sound enabled="false"/>
 <sound enabled="true" start-time="0">
-					<sound-file path="/sounds/fly.wav"/>
+					<sound-file path="sounds/fly.wav"/>
 				</sound>
 		</skill>
 		
@@ -108,7 +96,7 @@
 			</particles>
 			
 							<sound enabled="true" start-time="0">
-					<sound-file path="/sounds/fly.wav"/>
+					<sound-file path="sounds/fly.wav"/>
 				</sound>
 		</skill>
 
@@ -123,7 +111,7 @@
 				<particle-file path="smoke_particles.xml"/>
 			</particles>
 			<sound enabled="true" start-time="0">
-<sound-file path="/sounds/cannon.wav"/>
+<sound-file path="sounds/cannon.wav"/>
 			</sound>
 			<attack-strenght value="600"/>
 			<attack-var value="40"/>
@@ -179,7 +167,7 @@
 				<particle-file path="die_glow_particles.xml"/>									
 			</particles>	
 			<sound enabled="true" start-time="0">
-				<sound-file path="/sounds/dutchdie.ogg"/>
+				<sound-file path="sounds/dutchdie.ogg"/>
 			</sound>			
 			<fade value="true"/>
 		</skill>

@@ -7,7 +7,7 @@
 		<max-hp value="3000" regeneration="3000"/>
 		<max-ep value="0" />
 		<armor value="0" />
-		<armor-type value="wood"/>
+		<armor-type value="stone"/>
 		<sight value="5" />
 		<time value="50" />
 		<multi-selection value="true"/>
@@ -81,7 +81,6 @@
 				<particle-file path="glow_particles.xml"/>
 			</particles>
 			<sound enabled="true" start-time="0">
-				<sound-file path="$COMMONDATAPATH/sounds/tech_building_fall3.wav"/>
 			</sound>
 			<fade value="false"/>
 		</skill>
