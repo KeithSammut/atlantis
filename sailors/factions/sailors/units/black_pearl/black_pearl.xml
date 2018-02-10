@@ -30,20 +30,8 @@
 		<image-cancel path="images/tech_cancel.bmp"/>
 		<meeting-point value="false"/>
 		<selection-sounds enabled="true">
-			<sound path="sounds/guard_select1.wav"/>					
-			<sound path="sounds/guard_select2.wav"/>					
-			<sound path="sounds/guard_select3.wav"/>					
-			<sound path="sounds/guard_select4.wav"/>					
-			<sound path="sounds/guard_select5.wav"/>
 		</selection-sounds>
-		<command-sounds enabled="true">
-			<sound path="sounds/guard_ack1.wav"/>					
-			<sound path="sounds/guard_ack2.wav"/>					
-			<sound path="sounds/guard_ack3.wav"/>					
-			<sound path="sounds/guard_ack4.wav"/>					
-			<sound path="sounds/guard_ack5.wav"/>					
-			<sound path="sounds/guard_ack6.wav"/>					
-			<sound path="sounds/guard_ack7.wav"/>	
+		<command-sounds enabled="true">	
 		</command-sounds>
 	</parameters>
 
@@ -77,11 +65,6 @@
 			<sound enabled="false"/>
 			<sound enabled="true" start-time="0.6">
 				<sound-file path="sounds/catapult_walk1.wav"/>
-				<sound-file path="sounds/catapult_walk2.wav"/>
-				<sound-file path="sounds/catapult_walk3.wav"/>
-				<sound-file path="sounds/catapult_walk4.wav"/>
-				<sound-file path="sounds/catapult_walk5.wav"/>
-				<sound-file path="sounds/catapult_walk6.wav"/>
 			</sound>
 		</skill>
 
