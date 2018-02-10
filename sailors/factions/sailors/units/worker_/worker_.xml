@@ -70,11 +70,8 @@
 			<ep-cost value="0"/>
 			<speed value="500"/>
 			<anim-speed value="80"/>
-<<<<<<< HEAD
 			<animation path="../worker/models/worker_raft.g3d"/>
-=======
 			<animation path="models/worker_raft.g3d"/>
->>>>>>> 4c9245f1e7c1ee3580cf8d06b1aa843c47ba50ae
 			<sound enabled="false"/>
 		</skill>
 
@@ -104,11 +101,8 @@
 			<ep-cost value="0"/>
 			<speed value="210"/>
 			<anim-speed value="130"/>
-<<<<<<< HEAD
 			<animation path="../worker/models/worker_walking_wood.g3d"/>
-=======
 			<animation path="models/worker_walking_wood.g3d"/>
->>>>>>> 4c9245f1e7c1ee3580cf8d06b1aa843c47ba50ae
 			<sound enabled="false"/>
 		</skill>
 
