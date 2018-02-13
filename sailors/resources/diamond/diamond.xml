@@ -7,7 +7,6 @@
 		<default-amount value="2"/>
 		<resource-number value="4"/>
 		    <particles value="true">
- 		        <particle-file path="glow.xml"/>
 		    </particles>
 	</type>
 </resource>

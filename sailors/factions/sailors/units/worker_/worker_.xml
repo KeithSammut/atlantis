@@ -71,7 +71,6 @@
 			<speed value="500"/>
 			<anim-speed value="80"/>
 			<animation path="../worker/models/worker_raft.g3d"/>
-			<animation path="models/worker_raft.g3d"/>
 			<sound enabled="false"/>
 		</skill>
 
@@ -102,7 +101,6 @@
 			<speed value="210"/>
 			<anim-speed value="130"/>
 			<animation path="../worker/models/worker_walking_wood.g3d"/>
-			<animation path="models/worker_walking_wood.g3d"/>
 			<sound enabled="false"/>
 		</skill>
 
